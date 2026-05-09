@@ -19,3 +19,8 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);
 });
+
+// Database Connection
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log("MongoDB database connection established successfully"))
+    .catch(err => console.log("MongoDB connection error: ", err));
