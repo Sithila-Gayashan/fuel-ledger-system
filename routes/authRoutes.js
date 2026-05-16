@@ -32,4 +32,21 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// Add this temporary route to create a default admin
+router.get('/setup-default', async (req, res) => {
+    try {
+        const existingUser = await User.findOne({ username: 'admin' });
+        if (!existingUser) {
+            const hashedPassword = await bcrypt.hash('admin123', 10);
+            const newUser = new User({ username: 'admin', password: hashedPassword });
+            await newUser.save();
+            res.json({ message: "Default admin user created: admin/admin123" });
+        } else {
+            res.json({ message: "Admin user already exists" });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
 module.exports = router;

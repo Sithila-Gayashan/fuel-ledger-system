@@ -1,0 +1,17 @@
+T33Wz7MS6D332UzI
+
+sithilagayashan9_db_user
+
+mongodb+srv://sithilagayashan9_db_user:<T33Wz7MS6D332UzI>@cluster0.zuvi2pc.mongodb.net/?appName=Cluster0
+
+mongodb+srv://sithilagayashan9_db_user:<db_password>@cluster0.zuvi2pc.mongodb.net/
+
+mongodb://sithilagayashan9_db_user:<T33Wz7MS6D332UzI>@ac-jy6p5sp-shard-00-00.zuvi2pc.mongodb.net:27017,ac-jy6p5sp-shard-00-01.zuvi2pc.mongodb.net:27017,ac-jy6p5sp-shard-00-02.zuvi2pc.mongodb.net:27017/?ssl=true&replicaSet=atlas-1z4f49-shard-0&authSource=admin&appName=Cluster0
+
+git status
+
+git add .
+
+git commit -m "Add FuelEntry model and database connection logic"
+
+git push

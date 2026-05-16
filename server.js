@@ -25,7 +25,8 @@ mongoose.connect(process.env.MONGODB_URI)
 app.use('/api/fuel', require('./routes/fuelRoutes'));
 
 app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/fuel', require('./routes/fuelRoutes'));
+
+app.use('/api/settings', require('./routes/settingsRoutes'));
 
 app.get('/', (req, res) => {
     res.send('Fuel Ledger System Backend is Running!');
@@ -33,5 +34,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port: ${PORT}`);
+    console.log(`Server is running on: http://localhost:${PORT}`);
 });
